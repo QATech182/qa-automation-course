@@ -6,7 +6,7 @@ const person = {
   isStudent: true,
   greet: function () {
     // person.greet is method - function inside the object is called the method
-    console.log("Hello, my name is Alice");
+    console.log(`Hello, my name is ${person.name}`);
   },
   bye() {
     console.log("I am Alice, bye");
@@ -66,3 +66,17 @@ const car = {
 car.brand;
 car.speed;
 car.info();
+
+// ***** do not use the arrow function inside the object
+
+// Built-in Object Methods
+
+const soccerPlayer = {
+  name: "Ronaldo",
+  age: 43,
+  country: "Mexico",
+};
+
+console.log(Object.keys(soccerPlayer));
+console.log(Object.values(soccerPlayer));
+console.log(Object.entries(soccerPlayer)); // pairs

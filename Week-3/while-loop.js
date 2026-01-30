@@ -16,3 +16,11 @@
 //   console.log("Count:" + isCorrectPasswordLengthCorrect);
 //   isCorrectPasswordLengthCorrect++; // without this, this will run the forever
 // }
+
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) continue; // skip the current iteration only
+  if (i === 5) break; // exits the entire loop immediately
+  console.log(i);
+}
+
+// nested loops

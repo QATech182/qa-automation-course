@@ -14,3 +14,11 @@ console.log(x);
 // RangeError
 console.log("hi".repeat(3));
 //console.log("hi".repeat(-3));
+
+// function vs return
+function hello() {
+  console.log(["green", "yellow"]);
+  return "Hellow World";
+}
+
+hello();
