@@ -194,7 +194,7 @@ function reverse(array) {
     console.log(array[i]);
   }
 }
-//reverse(colors);
+reverse(colors);
 
 /* ## FINAL TASK
 
