@@ -188,3 +188,38 @@ Write a function that:
 📌 Do NOT use `.reverse()`
 **HINT:** You have to start at array length, Your condition must include 0, ****You have to use i--; 
 */
+
+function reverse(array) {
+  for (let i = array.length - 1; i >= 0; i--) {
+    console.log(array[i]);
+  }
+}
+//reverse(colors);
+
+/* ## FINAL TASK
+
+### 🏁 Task 10: Length Checker
+
+**Use ANY loop**
+
+Write a function that:
+1. Takes an array of strings
+2. Prints only strings longer than **4 characters**
+
+📌 Use `.length` on strings only
+
+## 🧪 Example Function Call
+printElements(["Toyota", "BMW", "Audi", "Tesla", "Mercedes", "Jeep", "Ford"]);
+*/
+
+function lengthChecker(addAnyStringArray, length) {
+  let newArray = [];
+  for (let i = 0; i < addAnyStringArray.length; i++) {
+    let countLength = addAnyStringArray[i].length;
+    if (countLength === length) {
+      newArray.push(addAnyStringArray[i]);
+    }
+  }
+  return newArray;
+}
+console.log(lengthChecker(colors, 5));
