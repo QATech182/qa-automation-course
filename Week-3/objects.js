@@ -80,3 +80,30 @@ const soccerPlayer = {
 console.log(Object.keys(soccerPlayer));
 console.log(Object.values(soccerPlayer));
 console.log(Object.entries(soccerPlayer)); // pairs
+
+let pro = "age";
+let userDetails = { age: 25, name: "Kyaw Kyaw Aung" };
+console.log(userDetails[pro]);
+
+userDetails.height = 185;
+userDetails.age = 54;
+
+console.log(userDetails.height); // add the property
+console.log(userDetails.age);
+
+delete userDetails.age; // delete the property
+console.log(userDetails);
+
+// in loops
+let user = { name: "Alex", age: 40, nickname: "Aung" };
+for (const key in user) {
+  console.log(user[key]);
+}
+
+// check the theory agian!
+
+let test = Object.entries(person);
+console.log(test);
+
+let flattened = test.flat();
+console.log(flattened);
