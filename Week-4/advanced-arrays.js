@@ -6,6 +6,15 @@ const num = [3, 6, 9, 10, 15, 58, 78, 200, 54, 687];
 
 const tripled = num.map((num) => num * 3); // arrow function one line
 
+const string = ["banana", "apple", "kiwi", "orange"];
+
+//const stringAdded = string.map(string => string. )
+
+const prices = [100, 200, 300];
+
+const pricesWithTax = prices.map((p) => p * 1.5);
+console.log(pricesWithTax); // [110, 220, 330]
+
 /*
     function (num){
         return num * 3;
@@ -51,3 +60,5 @@ const result = numChain
   .every((num) => num > 100);
 
 console.log(result);
+
+// reduce method - need to study
