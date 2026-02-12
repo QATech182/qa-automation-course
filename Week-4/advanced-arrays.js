@@ -10,11 +10,6 @@ const string = ["banana", "apple", "kiwi", "orange"];
 
 //const stringAdded = string.map(string => string. )
 
-const prices = [100, 200, 300];
-
-const pricesWithTax = prices.map((p) => p * 1.5);
-console.log(pricesWithTax); // [110, 220, 330]
-
 /*
     function (num){
         return num * 3;

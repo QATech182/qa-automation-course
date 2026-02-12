@@ -198,3 +198,25 @@ student.address.city = "Queens";
 
 // Print updated nested object
 console.log(student.address);
+
+// Example
+let myMovie = {
+  title: "Abc",
+  year: 2025,
+  printMyMovie() {
+    return `my movie name is ${this.title}`;
+  },
+};
+
+console.log(myMovie.printMyMovie());
+
+// call the function and involvking function
+
+/* this is another way to add the function from outside into the object
+
+car2.text = function(){
+  console.log ("Hi Akbarali");
+}
+console.log(car2);
+car2.text();
+*/
