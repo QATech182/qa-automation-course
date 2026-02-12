@@ -253,24 +253,105 @@ class ElectricCar extends Car {
 
   // drive method overwrite
   drive() {
-    if (this.batteryRange <= 0) console.log(`${this.brand} battery empty!`);
-    this.batteryRange -= 20;
-    console.log(
-      `${this.brand} is driving. BatterRange is: ${this.batteryRange}`,
-    );
+    if (this.batteryRange <= 0) {
+      console.log(`${this.brand} battery empty!`);
+    } else {
+      this.batteryRange -= 20;
+      console.log(
+        `${this.brand} is driving. BatterRange is: ${this.batteryRange}`,
+      );
+    }
   }
 
   // New method charge()
   charge() {
     this.batteryRange = 100;
-    console.log(`${this.brand} is fully charged ⚡. Battery Range: 100`);
+    console.log(`${this.brand} is fully charged. Battery Range is: 100`);
   }
 }
 
 const eCar = new ElectricCar("Telsa", 2500, 0, 100);
 
-for (let i = 1; i <= 3; i++) {
-  setTimeout(function () {
-    eCar.drive();
-  }, i * 1000);
+// for (let i = 1; i <= 3; i++) {
+//   setTimeout(function () {
+//     eCar.drive();
+//   }, i * 1000);
+// }
+
+eCar.drive();
+eCar.charge();
+
+// for (let i = 1; i <= 3; i++) {
+//   setTimeout(function () {
+//     eCar.drive();
+//   }, i * 1000);
+// }
+
+console.log("============ Part 6 ============");
+/*
+ PART 6: POLYMORPHISM
+🎭 Task 7: Same Method, Different Behavior
+Create:
+One Car object
+One ElectricCar object
+Call drive() on both.
+📌 Each object should behave differently.
+*/
+
+const carObj = new Car("KIA", 25000, 250);
+carObj.drive();
+
+const ecCarObj = new ElectricCar("Telsa", 50000, 80);
+ecCarObj.drive();
+
+console.log("============ Part 7 ============");
+
+/*
+# 🔹 PART 7: MINI CHALLENGE
+
+## 🏁 Task 8: Garage Manager
+Create a class called `Garage` that:
+
+1. Has a constructor with:
+    - garageName
+    - cars (an empty array)
+2. Has these methods:
+    - `addCar(car)` → adds a car to the array
+    - `listCars()` → returns a list of car brands
+    - `findExpensive(limit)`
+        - Returns all cars above the limit
+
+📌 Must use:
+
+- class methods
+- arrays inside the class
+- `this`
+*/
+
+class Garage {
+  constructor(garageName) {
+    this.garageName = garageName;
+    this.cars = [];
+  }
+
+  addCar(car) {
+    this.cars.push(car);
+  }
+
+  listCars() {
+    return this.cars.map((car) => car.brand);
+  }
+
+  findExpensive(limit) {
+    return this.cars.filter((car) => car.price > limit);
+  }
 }
+
+const garage = new Garage("Eric Garage");
+
+garage.addCar({ brand: "KIA", price: 25000 });
+garage.addCar({ brand: "BMW", price: 50000 });
+garage.addCar({ brand: "Telsa", price: 75000 });
+
+console.log(garage.listCars());
+console.log(garage.findExpensive(5000));
